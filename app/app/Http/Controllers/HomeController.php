@@ -14,21 +14,34 @@ class HomeController extends Controller
     {
         $title = 'Home';
 
-        $products = collect([
-            ['title' => 'product 1', 'price' => 1000],
-            ['title' => 'product 2', 'price' => 20],
-            ['title' => 'product 3', 'price' => 500],
-            ['title' => 'product 4', 'price' => 30],
-            ['title' => 'product 5', 'price' => 300],
-            ['title' => 'product 6', 'price' => 999],
-            ['title' => 'product 7', 'price' => 199],
-        ]);
+//        $products = collect([
+//            ['title' => 'product 1', 'price' => 1000],
+//            ['title' => 'product 2', 'price' => 20],
+//            ['title' => 'product 3', 'price' => 500],
+//            ['title' => 'product 4', 'price' => 30],
+//            ['title' => 'product 5', 'price' => 300],
+//            ['title' => 'product 6', 'price' => 999],
+//            ['title' => 'product 7', 'price' => 199],
+//        ]);
+//
+//        $filtered = $products->filter(function ($value, $key) {
+//            return $value['price'] >= 200;
+//        });
 
-        $filtered = $products->filter(function ($value, $key) {
-            return $value['price'] >= 200;
+        $countries = Country::query()->limit(10)->get();
+        dump($countries->toArray());
+        $filtered = $countries->filter(function ($value) {
+            return $value['Population'] > 10000000;
         });
+        dump($filtered->toArray());
 
-        return view('home.index', compact('title', 'products', 'filtered'));
+        dump($countries->countBy(function (Country $country) {
+            return $country->Continent;
+        }));
+
+        $posts = Post::query()->get();
+
+        return view('home.index', compact('title', 'posts'));
     }
 
     public function store(Request $request)
