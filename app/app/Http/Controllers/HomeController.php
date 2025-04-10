@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
+use App\Models\Post;
+use App\Models\Country;
 
 class HomeController extends Controller
 {
@@ -11,46 +13,27 @@ class HomeController extends Controller
     {
         $title = 'Home';
 
-//        $cities = DB::table('city')
-//            ->select('city.ID', 'city.Name', 'city.CountryCode', 'country.Name as country')
-//            ->join('country', 'city.CountryCode', '=', 'country.Code')
-//            ->limit(10)
-//            ->offset(10)
-//            ->get();
-//        dump($cities);
+//        $posts = Post::all()->toArray();
+//        dump($posts);
 
-//        $cities = DB::table('city')
-//            ->selectRaw('sum(city.Population) as sum_p, city.CountryCode, country.Name as country')
-//            ->join('country', 'city.CountryCode', '=', 'country.Code')
-//            ->groupBy('city.CountryCode')
-//            ->having('city.CountryCode', '=', 'UKR')
-//            ->get();
-//        dump($cities);
+//        $post = Post::query()->first()->toArray();
+//        dump($post);
 
-//        dump(DB::table('users')->insert([
-//            ['name' => 'Nana', 'email' => 'nana@gmail.com', 'password' => bcrypt('nana')],
-//            ['name' => 'Fuma', 'email' => 'fuma@gmail.com', 'password' => bcrypt('fuma')],
-//            ['name' => 'Olia', 'email' => 'olia@gmail.com', 'password' => bcrypt('olia')]
-//        ]));
+//        $post = Post::query()->find(6, ['id', 'title', 'slug'])->toArray();
+//        dump($post);
 
-//        $user = DB::table('users')->where('id', '=', '17')->first();
-//        dump($user);
+//        $countries = Country::query()
+//            ->where('Population', '>', '100000000')
+//            ->orderBy('Population', 'desc')
+//            ->limit(5)
+//            ->get(['Name', 'Population']);
+//        dump($countries);
+//        dump($countries->toJson());
+//        dump(response()->json($countries));
 
-//        dump(
-//            DB::table('users')
-//                ->where('id', 16)
-//                ->update(['name' => 'Dady', 'password' => '123456'])
-//        );
-
-//        dump(
-//            DB::table('users')
-//                ->updateOrInsert(
-//                    ['email' => 'fuma@gmail.com'],
-//                    ['name' => 'Babay', 'password' => 'babyka']
-//                )
-//        );
-
-//        dump(DB::table('users')->delete(18));
+        $country = Country::query()->first()->toArray();
+        dump($country);
+        dump($country['Name']);
 
         return view('home.index', compact('title'));
     }
