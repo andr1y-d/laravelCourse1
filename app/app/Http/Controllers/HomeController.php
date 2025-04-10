@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 
@@ -12,30 +11,46 @@ class HomeController extends Controller
     {
         $title = 'Home';
 
-//        $users = [];
-//        $users = DB::table('users')->get(['id', 'name']);
-//        $user = DB::table('users')->where('name', '=', 'Andrii')->first();
-//        $users = DB::table('users')->where('name', '=', 'Andrii')->value('name');
-//        dump($users);
+//        $cities = DB::table('city')
+//            ->select('city.ID', 'city.Name', 'city.CountryCode', 'country.Name as country')
+//            ->join('country', 'city.CountryCode', '=', 'country.Code')
+//            ->limit(10)
+//            ->offset(10)
+//            ->get();
+//        dump($cities);
 
-//        $users = DB::table('users')->where('id', '>', 7)->orderBy('id', 'desc')->get();
+//        $cities = DB::table('city')
+//            ->selectRaw('sum(city.Population) as sum_p, city.CountryCode, country.Name as country')
+//            ->join('country', 'city.CountryCode', '=', 'country.Code')
+//            ->groupBy('city.CountryCode')
+//            ->having('city.CountryCode', '=', 'UKR')
+//            ->get();
+//        dump($cities);
 
-//        $users = DB::table('users')->pluck('name', 'id');
-//        dump($users);
+//        dump(DB::table('users')->insert([
+//            ['name' => 'Nana', 'email' => 'nana@gmail.com', 'password' => bcrypt('nana')],
+//            ['name' => 'Fuma', 'email' => 'fuma@gmail.com', 'password' => bcrypt('fuma')],
+//            ['name' => 'Olia', 'email' => 'olia@gmail.com', 'password' => bcrypt('olia')]
+//        ]));
 
-//        DB::table('city')->orderBy('name')->chunk(100, function (Collection $cities) {
-//            foreach ($cities as $city) {
-//                if($city->Name == 'Bacabal') {
-//                    return false;
-//                }
-//                dump($city->Name);
-//            }
-//        });
+//        $user = DB::table('users')->where('id', '=', '17')->first();
+//        dump($user);
 
-//        $cities = DB::table('city')->limit(10)->get(['Id', 'Name']);
+//        dump(
+//            DB::table('users')
+//                ->where('id', 16)
+//                ->update(['name' => 'Dady', 'password' => '123456'])
+//        );
 
-        $cities = DB::table('city')->where('Name', '=', 'Ternopil')->get(['Id', 'Name']);
-        dump($cities);
+//        dump(
+//            DB::table('users')
+//                ->updateOrInsert(
+//                    ['email' => 'fuma@gmail.com'],
+//                    ['name' => 'Babay', 'password' => 'babyka']
+//                )
+//        );
+
+//        dump(DB::table('users')->delete(18));
 
         return view('home.index', compact('title'));
     }

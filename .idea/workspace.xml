@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0daa79c-fe6b-4439-b992-c6c6d0c2ce18" name="Changes" comment="11th lesson, db migrations">
+    <list default="true" id="c0daa79c-fe6b-4439-b992-c6c6d0c2ce18" name="Changes" comment="13th lesson, sql queries functions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/home/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -322,7 +324,23 @@
       <option name="project" value="LOCAL" />
       <updated>1744202586333</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="system changes">
+      <option name="closed" value="true" />
+      <created>1744293927911</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1744293927911</updated>
+    </task>
+    <task id="LOCAL-00014" summary="13th lesson, sql queries functions">
+      <option name="closed" value="true" />
+      <created>1744302006833</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1744302006833</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -350,6 +368,8 @@
     <MESSAGE value="ninth lesson, blade templates and views, blade directives" />
     <MESSAGE value="10th lesson, vite, change docker-compose.yml to avoid errors with display css" />
     <MESSAGE value="11th lesson, db migrations" />
-    <option name="LAST_COMMIT_MESSAGE" value="11th lesson, db migrations" />
+    <MESSAGE value="system changes" />
+    <MESSAGE value="13th lesson, sql queries functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="13th lesson, sql queries functions" />
   </component>
 </project>
