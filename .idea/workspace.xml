@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0daa79c-fe6b-4439-b992-c6c6d0c2ce18" name="Changes" comment="13th lesson, sql queries functions">
+    <list default="true" id="c0daa79c-fe6b-4439-b992-c6c6d0c2ce18" name="Changes" comment="15th lesson, Eloquent ORM, Model, api">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/resources/views/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/home/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Models/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -340,7 +341,23 @@
       <option name="project" value="LOCAL" />
       <updated>1744302006833</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="14th lesson, CRUD operations by laravel">
+      <option name="closed" value="true" />
+      <created>1744305589362</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1744305589362</updated>
+    </task>
+    <task id="LOCAL-00016" summary="15th lesson, Eloquent ORM, Model, api">
+      <option name="closed" value="true" />
+      <created>1744308993812</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1744308993812</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,6 +387,8 @@
     <MESSAGE value="11th lesson, db migrations" />
     <MESSAGE value="system changes" />
     <MESSAGE value="13th lesson, sql queries functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="13th lesson, sql queries functions" />
+    <MESSAGE value="14th lesson, CRUD operations by laravel" />
+    <MESSAGE value="15th lesson, Eloquent ORM, Model, api" />
+    <option name="LAST_COMMIT_MESSAGE" value="15th lesson, Eloquent ORM, Model, api" />
   </component>
 </project>

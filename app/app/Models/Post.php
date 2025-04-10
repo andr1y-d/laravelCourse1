@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
+    const CREATED_AT = null;
+    const UPDATED_AT = null;
+    protected $fillable = ['title', 'content', 'slug', 'category_id'];
+
 }

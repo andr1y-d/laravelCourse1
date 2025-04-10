@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\HomeController;
+use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,4 +22,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
 Route::get('/about', [HomeController::class, 'about'])->name('home.about');
 Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
-
+Route::post('/store', [HomeController::class, 'store'])->withoutMiddleware(VerifyCsrfToken::class);
+Route::put('/update', [HomeController::class, 'update'])->withoutMiddleware(VerifyCsrfToken::class);
+Route::delete('/delete', [HomeController::class, 'delete'])->withoutMiddleware(VerifyCsrfToken::class);
+Route::delete('/destroy', [HomeController::class, 'destroy'])->withoutMiddleware(VerifyCsrfToken::class);

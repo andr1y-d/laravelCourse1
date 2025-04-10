@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 use App\Models\Post;
@@ -13,29 +14,54 @@ class HomeController extends Controller
     {
         $title = 'Home';
 
-//        $posts = Post::all()->toArray();
-//        dump($posts);
+//        $country = Country::query()->findOrFail('USA')->toArray();
+//        dump($country);
+//        dump($country['Name']);
 
-//        $post = Post::query()->first()->toArray();
+//        dump('Count: ' . Country::query()->count());
+//        dump('Max: ' . Country::query()->Max('Population'));
+//        dump('Min: ' . Country::query()->Min('Population'));
+//        dump('Avg: ' . Country::query()->Avg('Population'));
+
+//        $post = new Post();
+//        $post->title = 'New Post';
+//        $post->content = 'New Post Content';
+//        $post->category_id = 1;
+//        $post->slug = 'yopta slugg';
 //        dump($post);
-
-//        $post = Post::query()->find(6, ['id', 'title', 'slug'])->toArray();
+//
+//        dump($post->save());
 //        dump($post);
-
-//        $countries = Country::query()
-//            ->where('Population', '>', '100000000')
-//            ->orderBy('Population', 'desc')
-//            ->limit(5)
-//            ->get(['Name', 'Population']);
-//        dump($countries);
-//        dump($countries->toJson());
-//        dump(response()->json($countries));
-
-        $country = Country::query()->first()->toArray();
-        dump($country);
-        dump($country['Name']);
 
         return view('home.index', compact('title'));
+    }
+
+    public function store(Request $request)
+    {
+        dump($request->all());
+        Post::query()->create($request->all());
+    }
+
+    public function update(Request $request)
+    {
+        $post = Post::query()->find($request->id);
+        $post->title =$request->title;
+        $post->content = $request->content;
+        $post->category_id = $request->category_id;
+        $post->slug = $request->slug;
+        dump($post->save());
+    }
+
+    public function delete(Request $request)
+    {
+        $post = Post::query()->find($request->id);
+        dump($post->delete());
+    }
+
+    public function destroy(Request $request)
+    {
+        $post = Post::destroy($request->id);
+        dump($post);
     }
 
     public function about(): View
