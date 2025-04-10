@@ -35,9 +35,9 @@
 {{--        <br>--}}
 {{--    @endfor--}}
 
-    @foreach($users as $user)
-        <span @class(['text-danger' => $loop->even])>{{ $user->id }} - {{ $user->name }} - {{ $user->password }}</span>
-        <br>
-    @endforeach
+{{--    @foreach($users as $user)--}}
+{{--        <span @class(['text-danger' => $loop->even])>{{ $user->id }} - {{ $user->name }} - {{ $user->password }}</span>--}}
+{{--        <br>--}}
+{{--    @endforeach--}}
 @endsection
 
