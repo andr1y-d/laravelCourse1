@@ -129,6 +129,8 @@
       <path value="$PROJECT_DIR$/app/vendor/mockery/mockery" />
       <path value="$PROJECT_DIR$/app/vendor/monolog/monolog" />
       <path value="$PROJECT_DIR$/app/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/app/vendor/barryvdh/laravel-debugbar" />
+      <path value="$PROJECT_DIR$/app/vendor/php-debugbar/php-debugbar" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />

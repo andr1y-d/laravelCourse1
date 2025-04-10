@@ -10,6 +10,6 @@ class Post extends Model
     use HasFactory;
     const CREATED_AT = null;
     const UPDATED_AT = null;
-    protected $fillable = ['title', 'content', 'slug', 'category_id'];
+    protected $fillable = ['title', 'slug', 'content', 'category_id'];
 
 }

@@ -14,26 +14,21 @@ class HomeController extends Controller
     {
         $title = 'Home';
 
-//        $country = Country::query()->findOrFail('USA')->toArray();
-//        dump($country);
-//        dump($country['Name']);
+        $products = collect([
+            ['title' => 'product 1', 'price' => 1000],
+            ['title' => 'product 2', 'price' => 20],
+            ['title' => 'product 3', 'price' => 500],
+            ['title' => 'product 4', 'price' => 30],
+            ['title' => 'product 5', 'price' => 300],
+            ['title' => 'product 6', 'price' => 999],
+            ['title' => 'product 7', 'price' => 199],
+        ]);
 
-//        dump('Count: ' . Country::query()->count());
-//        dump('Max: ' . Country::query()->Max('Population'));
-//        dump('Min: ' . Country::query()->Min('Population'));
-//        dump('Avg: ' . Country::query()->Avg('Population'));
+        $filtered = $products->filter(function ($value, $key) {
+            return $value['price'] >= 200;
+        });
 
-//        $post = new Post();
-//        $post->title = 'New Post';
-//        $post->content = 'New Post Content';
-//        $post->category_id = 1;
-//        $post->slug = 'yopta slugg';
-//        dump($post);
-//
-//        dump($post->save());
-//        dump($post);
-
-        return view('home.index', compact('title'));
+        return view('home.index', compact('title', 'products', 'filtered'));
     }
 
     public function store(Request $request)
