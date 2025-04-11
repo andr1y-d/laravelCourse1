@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0daa79c-fe6b-4439-b992-c6c6d0c2ce18" name="Changes" comment="19th lesson, relations, one to one">
+    <list default="true" id="c0daa79c-fe6b-4439-b992-c6c6d0c2ce18" name="Changes" comment="20th lesson, relations, one to many, many to one">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Models/Post.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +236,7 @@
       <workItem from="1744316324979" duration="2000" />
       <workItem from="1744316337358" duration="501000" />
       <workItem from="1744316860783" duration="1911000" />
-      <workItem from="1744368765739" duration="2739000" />
+      <workItem from="1744368765739" duration="4505000" />
     </task>
     <task id="LOCAL-00001" summary="second lesson, facades, service container, service providers">
       <option name="closed" value="true" />
@@ -397,7 +398,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744370984035</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="20th lesson, relations, one to many, many to one">
+      <option name="closed" value="true" />
+      <created>1744372460664</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1744372460664</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,6 +442,7 @@
     <MESSAGE value="17th lesson, ORM api, crud" />
     <MESSAGE value="18th lesson, collections" />
     <MESSAGE value="19th lesson, relations, one to one" />
-    <option name="LAST_COMMIT_MESSAGE" value="19th lesson, relations, one to one" />
+    <MESSAGE value="20th lesson, relations, one to many, many to one" />
+    <option name="LAST_COMMIT_MESSAGE" value="20th lesson, relations, one to many, many to one" />
   </component>
 </project>
