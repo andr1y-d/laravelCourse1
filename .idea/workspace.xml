@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0daa79c-fe6b-4439-b992-c6c6d0c2ce18" name="Changes" comment="required sys updates">
+      <change afterPath="$PROJECT_DIR$/app/resources/views/posts/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/home/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resources/views/layouts/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/resources/views/layouts/main.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,7 +238,7 @@
       <workItem from="1744316324979" duration="2000" />
       <workItem from="1744316337358" duration="501000" />
       <workItem from="1744316860783" duration="1911000" />
-      <workItem from="1744368765739" duration="6140000" />
+      <workItem from="1744368765739" duration="11271000" />
     </task>
     <task id="LOCAL-00001" summary="second lesson, facades, service container, service providers">
       <option name="closed" value="true" />
@@ -420,7 +424,23 @@
       <option name="project" value="LOCAL" />
       <updated>1744374778383</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="22nd lesson, keeping relations">
+      <option name="closed" value="true" />
+      <created>1744385767247</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1744385767247</updated>
+    </task>
+    <task id="LOCAL-00025" summary="required sys updates">
+      <option name="closed" value="true" />
+      <created>1744385792547</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1744385792547</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -458,6 +478,7 @@
     <MESSAGE value="19th lesson, relations, one to one" />
     <MESSAGE value="20th lesson, relations, one to many, many to one" />
     <MESSAGE value="21st lesson, relations, many to many" />
+    <MESSAGE value="22nd lesson, keeping relations" />
     <MESSAGE value="required sys updates" />
     <option name="LAST_COMMIT_MESSAGE" value="required sys updates" />
   </component>
