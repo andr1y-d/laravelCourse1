@@ -16,66 +16,63 @@ class HomeController extends Controller
     {
         $title = 'Home';
 
-//        $categories = Category::query()->find(1);
-//        dump($categories->toArray());
-//        $post = Post::query()->where('category_id', '=', 1)->get();
-//        dump($post->toArray());
-//        dump($categories->posts->toArray());
-//
-//        $post = Post::query()->find(1);
-//        dump($post->category->toArray());
 
+//        Post::query()->create([
+//            'title' => 'another title',
+//            'slug' => 'sluuuuuuuug',
+//            'content' => 'content',
+//            'category_id' => 4
+//        ]);
 
+//        $category = Category::query()->find(2);
+//        $category->posts()->save(new Post([
+//            'title' => 'tilte',
+//            'slug' => 'slig',
+//            'content' => 'content 3',
+//        ]));
 
-//        $categories = Category::all();
-//        $categories = Category::with('posts')->get();
-//        dump($categories->toArray());
-//
-//        foreach ($categories as $category) {
-//            echo "{$category->name}<br><br>";
-//            foreach ($category->posts as $post) {
-//                echo "{$post->title}<br>";
-//            }
-//            echo "<hr>";
-//        }
+//        $category = Category::query()->find(4);
+//        $category->posts()->saveMany([
+//            new Post([
+//                'title' => 'tilte2',
+//                'slug' => 'sliig',
+//                'content' => 'content 3',]),
+//            new Post([
+//                'title' => 'tilte1',
+//                'slug' => 'sliiig',
+//                'content' => 'content 3',]),
+//        ]);
 
+//        $category = Category::query()->find(3);
+//        dump($category->posts->toArray());
+//        $category->posts()->save(new Post([
+//                'title' => 'tilte1222',
+//                'slug' => 'sliiig2222',
+//                'content' => 'content 3222',
+//            ]));
+//        $category->refresh();
+//        dump($category->posts->toArray());
 
+//        $category = Category::query()->find(4);
+//        $post = Post::query()->find(12);
+//        $post->category()->associate($category);
+//        $post->save();
 
-//        $categories = Category::query()->withCount('posts')->get();
-//        dump($categories->toArray());
-//
-//        foreach ($categories as $category) {
-//            echo "{$category->name} ({$category->posts_count})<br><br>";
-//            echo "<hr>";
-//        }
+//        $post = Post::query()->find(12);
+//        $post->category()->dissociate();
+//        $post->save();
 
+//        $post = Post::query()->find(12);
+//        $post->tags()->attach([1,2,4]);
 
-//        $category = Category::query()->find(1);
-//        dump($category->posts()->where('id', '<>', 7)->orderBy('id', 'desc')->get()->toArray());
+//        $post = Post::query()->find(12);
+//        $post->tags()->detach([1,2,4]);
 
+//        $post = Post::query()->find(12);
+//        $post->tags()->sync([1,2,4]);
 
-//        $post = Post::query()->find(1);
-//        $tags = $post->tags;
-//        dump($tags->toArray());
-//
-//        foreach ($tags as $tag) {
-//            echo $tag->title . "<br>";
-//        }
-
-//        $tag = Tag::query()->find(4);
-//        dump($tag->posts->toArray());
-
-//        $posts = Post::with('tags')->get();
-//        foreach ($posts as $post) {
-//            echo $post->title . "<br>";
-//            foreach ($post->tags as $tag) {
-//                echo $tag->title . "<br>";
-//            }
-//            echo "<hr>";
-//        }
-
-        $category = Category::query()->find(1);
-        dump($category->latestActivePosts->toArray());
+//        $post = Post::query()->find(12);
+//        $post->tags()->toggle([1,2,4,3]);
 
         return view('home.index', compact('title'));
     }
