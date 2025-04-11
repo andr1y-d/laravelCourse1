@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
@@ -14,39 +15,20 @@ class HomeController extends Controller
     {
         $title = 'Home';
 
-//        $products = collect([
-//            ['title' => 'product 1', 'price' => 1000],
-//            ['title' => 'product 2', 'price' => 20],
-//            ['title' => 'product 3', 'price' => 500],
-//            ['title' => 'product 4', 'price' => 30],
-//            ['title' => 'product 5', 'price' => 300],
-//            ['title' => 'product 6', 'price' => 999],
-//            ['title' => 'product 7', 'price' => 199],
-//        ]);
-//
-//        $filtered = $products->filter(function ($value, $key) {
-//            return $value['price'] >= 200;
-//        });
+        $categories = Category::query()->find(1);
+        dump($categories->toArray());
+//        $post = Post::query()->where('category_id', '=', 1)->get();
+//        dump($post->toArray());
+        dump($categories->post->toArray());
 
-        $countries = Country::query()->limit(10)->get();
-        dump($countries->toArray());
-        $filtered = $countries->filter(function ($value) {
-            return $value['Population'] > 10000000;
-        });
-        dump($filtered->toArray());
+        $post = Post::query()->find(1);
+        dump($post->category->toArray());
 
-        dump($countries->countBy(function (Country $country) {
-            return $country->Continent;
-        }));
-
-        $posts = Post::query()->get();
-
-        return view('home.index', compact('title', 'posts'));
+        return view('home.index', compact('title'));
     }
 
     public function store(Request $request)
     {
-        dump($request->all());
         Post::query()->create($request->all());
     }
 
@@ -57,19 +39,18 @@ class HomeController extends Controller
         $post->content = $request->content;
         $post->category_id = $request->category_id;
         $post->slug = $request->slug;
-        dump($post->save());
+        $post->save();
     }
 
     public function delete(Request $request)
     {
         $post = Post::query()->find($request->id);
-        dump($post->delete());
+        $post->delete();
     }
 
     public function destroy(Request $request)
     {
-        $post = Post::destroy($request->id);
-        dump($post);
+        Post::destroy($request->id);
     }
 
     public function about(): View

@@ -7,9 +7,9 @@
 @section('content')
     <h1>Home page</h1>
 
-    @foreach($posts as $post)
-        {{ $post['title'] }} | {{ $post->isPublished() }}<br>
-    @endforeach
+{{--    @foreach($posts as $post)--}}
+{{--        {{ $post['title'] }} | {{ $post->isPublished() }}<br>--}}
+{{--    @endforeach--}}
 
 {{--    @foreach($filtered->chunk(4) as $chunk)--}}
 {{--        <div class="row my-3">--}}
