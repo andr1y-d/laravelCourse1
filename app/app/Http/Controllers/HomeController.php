@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
@@ -49,10 +50,32 @@ class HomeController extends Controller
 //        }
 
 
+//        $category = Category::query()->find(1);
+//        dump($category->posts()->where('id', '<>', 7)->orderBy('id', 'desc')->get()->toArray());
+
+
+//        $post = Post::query()->find(1);
+//        $tags = $post->tags;
+//        dump($tags->toArray());
+//
+//        foreach ($tags as $tag) {
+//            echo $tag->title . "<br>";
+//        }
+
+//        $tag = Tag::query()->find(4);
+//        dump($tag->posts->toArray());
+
+//        $posts = Post::with('tags')->get();
+//        foreach ($posts as $post) {
+//            echo $post->title . "<br>";
+//            foreach ($post->tags as $tag) {
+//                echo $tag->title . "<br>";
+//            }
+//            echo "<hr>";
+//        }
 
         $category = Category::query()->find(1);
-        dump($category->posts()->where('id', '<>', 7)->orderBy('id', 'desc')->get()->toArray());
-
+        dump($category->latestActivePosts->toArray());
 
         return view('home.index', compact('title'));
     }
