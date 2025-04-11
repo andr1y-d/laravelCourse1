@@ -54,30 +54,30 @@ class HomeController extends Controller
 //        dump($category->posts->toArray());
 
 //        $category = Category::query()->find(4);
-//        $post = Post::query()->find(12);
-//        $post->category()->associate($category);
-//        $post->save();
+//        $posts = Post::query()->find(12);
+//        $posts->category()->associate($category);
+//        $posts->save();
 
-//        $post = Post::query()->find(12);
-//        $post->category()->dissociate();
-//        $post->save();
+//        $posts = Post::query()->find(12);
+//        $posts->category()->dissociate();
+//        $posts->save();
 
-//        $post = Post::query()->find(12);
-//        $post->tags()->attach([1,2,4]);
+//        $posts = Post::query()->find(12);
+//        $posts->tags()->attach([1,2,4]);
 
-//        $post = Post::query()->find(12);
-//        $post->tags()->detach([1,2,4]);
+//        $posts = Post::query()->find(12);
+//        $posts->tags()->detach([1,2,4]);
 
-//        $post = Post::query()->find(12);
-//        $post->tags()->sync([1,2,4]);
+//        $posts = Post::query()->find(12);
+//        $posts->tags()->sync([1,2,4]);
 
-//        $post = Post::query()->find(12);
-//        $post->tags()->toggle([1,2,4,3]);
+//        $posts = Post::query()->find(12);
+//        $posts->tags()->toggle([1,2,4,3]);
 
         return view('home.index', compact('title'));
     }
 
-    public function store(Request $request) //api post
+    public function store(Request $request) //api posts
     {
         Post::query()->create($request->all());
     }

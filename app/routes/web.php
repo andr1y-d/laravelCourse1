@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Admin\PostController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
@@ -26,3 +26,6 @@ Route::post('/store', [HomeController::class, 'store'])->withoutMiddleware(Verif
 Route::put('/update', [HomeController::class, 'update'])->withoutMiddleware(VerifyCsrfToken::class);
 Route::delete('/delete', [HomeController::class, 'delete'])->withoutMiddleware(VerifyCsrfToken::class);
 Route::delete('/destroy', [HomeController::class, 'destroy'])->withoutMiddleware(VerifyCsrfToken::class);
+
+Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
+Route::post('/posts', [PostController::class, 'store'])->name('posts.store');

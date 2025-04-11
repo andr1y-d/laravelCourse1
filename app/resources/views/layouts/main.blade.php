@@ -26,6 +26,9 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{ route('home.contact') }}">Contact</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ route('posts.create') }}">Add post</a>
+                </li>
             </ul>
         </div>
     </div>
